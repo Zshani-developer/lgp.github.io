@@ -1,0 +1,23 @@
+1. on click of the button, take branch id in jquery.
+
+2. then send that branch_id to another pdf page and make a pdf report
+
+shakal
+Branch Name : abc branch
+Address: asdfasdf
+Phone: 4545
+
+S.No, vendor name, Product name, Quantity
+
+select `p`.`product_name`, `v`.`vendor_name`,
+`v`.`contact_number`, `bs`.`quantity` 
+ from `products` as `p`, 
+`vendors` as `v`, `branch_stock` as `bs` 
+where `p`.`vendor_id` = `v`.`id` and 
+`p`.`id` = `bs`.`product_id` and 
+`bs`.`branch_id` = 3 and 
+`bs`.`quantity` = 0 
+order by `v`.`id` asc,
+`p`.`product_name` asc;
+
+

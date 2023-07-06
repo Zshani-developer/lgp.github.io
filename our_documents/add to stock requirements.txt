@@ -1,0 +1,26 @@
+0. ADD another combo box at the top labeled select branch.
+
+1. on change of vendor, bring products of that vendor and 
+show in the products combo box (using ajax).
+
+2. on change of product, bring available quantity of that product 
+from branch_stock table.
+branch_id, product_id
+if no record found, then show 0.
+
+3. when form has been submitted then 
+start a loop over all product ids.
+	case 1:
+	if product does not exists in branch_stock table
+	then insert a new row.
+
+	case 2:
+	if product exists in branch stock then 
+	update `branch_stock` set 
+	`quantity` = `quantity` + purchasedQuantity 
+	where product_id = 1 and 
+	branch_id = 2
+
+
+data-rel="chosen"
+
